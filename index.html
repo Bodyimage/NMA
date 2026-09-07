@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Living Systematic Review of Body Image Interventions</title>
+  <meta name="description" content="A living systematic review website for body image interventions, including intervention categories and population-specific evidence." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+  <div class="page-shell">
+    <header>
+      <nav class="navbar" aria-label="Primary navigation">
+        <a class="brand" href="#cover" aria-label="Home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="38" height="38" viewBox="0 0 48 48" fill="none">
+              <path d="M24 41V25" stroke="#4E2CB4" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M23.3 23.8C15.4 23.2 9.6 17.1 8.4 8.4C17.4 10.2 23.4 15.7 23.3 23.8Z" fill="#6D3FD6" opacity="0.9"/>
+              <path d="M26 25.2C26.2 16.5 32.9 9.8 42 7.5C41.2 18.2 34.3 24.5 26 25.2Z" fill="#6D3FD6" opacity="0.76"/>
+              <path d="M13 31.5C20 31.7 23.5 35.5 24 41C17.6 40.2 13.8 36.9 13 31.5Z" fill="#8F6BE8" opacity="0.75"/>
+              <path d="M35.5 31.5C29.1 31.9 25.7 35.6 24 41C30.9 40.5 34.5 37 35.5 31.5Z" fill="#8F6BE8" opacity="0.68"/>
+            </svg>
+          </span>
+          <span class="brand-title">Living Systematic Review <span>of Body Image Interventions</span></span>
+        </a>
+
+        <button class="hamburger" id="menuButton" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#cover" class="active">Home</a></li>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#interventions">Interventions</a></li>
+          <li><a href="#general-population">General</a></li>
+          <li><a href="#high-risk-population">High Risk</a></li>
+          <li><a href="#eating-disorder-population">Eating Disorder</a></li>
+          <li><a href="references.html">Reference List</a></li>
+        </ul>
+
+        <a class="version-btn" href="#overview">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 3h7l4 4v14H7V3Z" stroke="currentColor" stroke-width="2"/>
+            <path d="M14 3v5h5M9 13h6M9 17h6M9 9h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Latest Version
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="cover-page" id="cover" aria-label="Animated cover page">
+        <div class="cover-board">
+          <h1 class="cover-title">
+            <span>Living Systematic Review</span>
+            <span>of Body Image Interventions</span>
+          </h1>
+
+          <div class="body-figure-wrap" aria-label="Positive body image icon">
+            <svg viewBox="0 0 520 360" role="img" aria-label="A line-art figure raising both arms inside an open heart, representing positive body image">
+              <defs>
+                <filter id="softCoverShadow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#6d3fd6" flood-opacity="0.12"/>
+                </filter>
+              </defs>
+
+              <!-- open heart outline, inline attributes prevent black fill on GitHub Pages -->
+              <path d="M258 112C224 50 145 44 99 92C45 148 81 245 202 316"
+                    fill="none" stroke="#9f7bea" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.78"/>
+              <path d="M262 112C296 50 375 44 421 92C475 148 439 245 318 316"
+                    fill="none" stroke="#9f7bea" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.78"/>
+
+              <!-- soft light marks -->
+              <path d="M92 164h27" fill="none" stroke="#a986ee" stroke-width="7" stroke-linecap="round" opacity="0.85"/>
+              <path d="M96 203l27-11" fill="none" stroke="#a986ee" stroke-width="7" stroke-linecap="round" opacity="0.85"/>
+              <path d="M428 164h-27" fill="none" stroke="#a986ee" stroke-width="7" stroke-linecap="round" opacity="0.85"/>
+              <path d="M424 203l-27-11" fill="none" stroke="#a986ee" stroke-width="7" stroke-linecap="round" opacity="0.85"/>
+
+              <!-- figure -->
+              <g filter="url(#softCoverShadow)">
+                <path d="M244 186C226 171 208 139 187 94C183 85 171 84 169 94C166 111 182 142 201 169C216 191 229 204 238 210"
+                      fill="none" stroke="#2f235f" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M276 186C294 171 312 139 333 94C337 85 349 84 351 94C354 111 338 142 319 169C304 191 291 204 282 210"
+                      fill="none" stroke="#2f235f" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+                <circle cx="260" cy="153" r="27" fill="#fffafc" stroke="#2f235f" stroke-width="8.5"/>
+
+                <path d="M237 209L237 281L249 281L249 340"
+                      fill="none" stroke="#2f235f" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M283 209L283 281L271 281L271 340"
+                      fill="none" stroke="#2f235f" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+
+              <!-- soft grounding shadow -->
+              <ellipse cx="260" cy="350" rx="92" ry="12" fill="#cdbcf5" opacity="0.28"/>
+            </svg>
+          </div>
+
+          <a class="cover-note note-1 green keyword-lg" href="#interventions">
+            <span>psychoeducation</span>
+          </a>
+
+          <a class="cover-note note-2 blue" href="#interventions">
+            <span>media literacy</span>
+          </a>
+
+          <a class="cover-note note-3 lavender keyword-lg" href="#interventions">
+            <span>cognitive dissonance</span>
+          </a>
+
+          <a class="cover-note note-4 mint" href="#interventions">
+            <span>thin ideal critique</span>
+          </a>
+
+          <a class="cover-note note-5 rose" href="#interventions">
+            <span>self compassion</span>
+          </a>
+
+          <a class="cover-note note-6 cream" href="#interventions">
+            <span>body activism</span>
+          </a>
+
+          <a class="cover-note note-7 blue" href="#interventions">
+            <span>mindfulness</span>
+          </a>
+
+          <a class="cover-note note-8 mint keyword-lg" href="#interventions">
+            <span>body functionality</span>
+          </a>
+
+          <a class="cover-note note-9 green keyword-lg" href="#interventions">
+            <span>role play</span>
+          </a>
+
+          <a class="cover-note note-10 cream" href="#interventions">
+            <span>mirror exposure</span>
+          </a>
+
+          <a class="cover-note note-11 lavender" href="#interventions">
+            <span>peer support</span>
+          </a>
+
+          <a class="cover-note note-12 rose" href="#interventions">
+            <span>evaluative conditioning</span>
+          </a>
+
+          <a class="cover-note note-13 blue keyword-sm" href="#interventions">
+            <span>homework</span>
+          </a>
+
+          <a class="cover-note note-14 green keyword-sm" href="#interventions">
+            <span>relapse prevention</span>
+          </a>
+
+          <a class="cover-note note-15 cream keyword-sm" href="#interventions">
+            <span>self affirmation</span>
+          </a>
+
+          <a class="cover-note note-16 lavender keyword-sm" href="#interventions">
+            <span>written exercises</span>
+          </a>
+
+          <a class="cover-note note-17 blue keyword-lg" href="#interventions">
+            <span>CBT</span>
+          </a>
+
+          <a class="cover-note note-18 rose" href="#interventions">
+            <span>body positivity</span>
+          </a>
+
+        </div>
+
+        <a class="scroll-hint" href="#overview" aria-label="Scroll to overview dashboard">
+          <span>Scroll to explore</span>
+          <span class="arrow">↓</span>
+        </a>
+      </section>
+
+      <section class="dashboard-hero" id="overview" aria-labelledby="dashboardTitle">
+        <div class="dashboard-card">
+          <div class="dashboard-header">
+            <h1 id="dashboardTitle">Summary at a glance</h1>
+          </div>
+
+          <div class="wide-stats-grid" aria-label="Review summary statistics">
+            <a class="wide-stat stat-link" href="references.html" aria-label="Open the reference list of included studies">
+              <span class="icon-bubble" aria-hidden="true">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 5.5C6.5 4.4 9.2 4.4 12 6v14c-2.8-1.6-5.5-1.6-8 0V5.5Zm8 .5c2.8-1.6 5.5-1.6 8-.5V20c-2.5-1.6-5.2-1.6-8 0V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div>
+                <strong>121</strong>
+                <span>Included studies</span>
+                <em class="stat-action">View reference list →</em>
+              </div>
+            </a>
+
+            <article class="wide-stat">
+              <span class="icon-bubble" aria-hidden="true">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <path d="M16 20v-1.8c0-1.5-1.6-2.7-4-2.7s-4 1.2-4 2.7V20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12 12.5a2.8 2.8 0 1 0 0-5.6 2.8 2.8 0 0 0 0 5.6ZM5 19v-1.2c0-1 .8-1.8 2.2-2.2M19 19v-1.2c0-1-.8-1.8-2.2-2.2M6.8 12.2a2.1 2.1 0 1 1 0-4.2M17.2 12.2a2.1 2.1 0 1 0 0-4.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <div>
+                <strong>15,000+</strong>
+                <span>Participants</span>
+              </div>
+            </article>
+
+            <article class="wide-stat">
+              <span class="icon-bubble pink" aria-hidden="true">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 20c-4.2-1.2-6.8-4.2-6.8-8.1 3.1.2 5.6 1.7 6.8 4.5 1.2-2.8 3.7-4.3 6.8-4.5 0 3.9-2.6 6.9-6.8 8.1Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M12 16.4C9.8 13.2 9.9 9.8 12 6c2.1 3.8 2.2 7.2 0 10.4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M4 20h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <div>
+                <strong>16</strong>
+                <span>Interventions</span>
+              </div>
+            </article>
+
+            <article class="wide-stat">
+              <span class="icon-bubble pink" aria-hidden="true">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <path d="M6 4v3M18 4v3M4 9h16M5 6h14a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M8 13h2M14 13h2M8 17h2M14 17h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <div>
+                <strong style="font-size:1rem; line-height:1.15;">2026.5.13</strong>
+                <span>Last update</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="population-panel">
+            <h2>Population groups <span style="font-weight:600; color:#6e7396;">(full dataset)</span></h2>
+
+            <div class="population-row">
+              <span>General population</span>
+              <div class="bar-track"><div class="bar-fill" style="--w: 45.45%;"></div></div>
+              <strong>45.45%</strong>
+            </div>
+
+            <div class="population-row">
+              <span>High risk population</span>
+              <div class="bar-track"><div class="bar-fill" style="--w: 46.28%;"></div></div>
+              <strong>46.28%</strong>
+            </div>
+
+            <div class="population-row">
+              <span>Eating disorder population</span>
+              <div class="bar-track"><div class="bar-fill" style="--w: 8.26%;"></div></div>
+              <strong>8.26%</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="overview-cards" aria-labelledby="populationCardsTitle">
+        <h2 class="sr-only" id="populationCardsTitle">Population groups</h2>
+
+        <div class="population-card-grid">
+          <a class="population-card" href="#general-population">
+            <div class="population-card-top">
+              <svg class="population-svg-icon" viewBox="0 0 120 120" aria-hidden="true">
+                <circle cx="60" cy="60" r="58" fill="#efe8ff"/>
+                <g fill="none" stroke="#6d3fd6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="38" cy="43" r="11"/>
+                  <circle cx="60" cy="39" r="11"/>
+                  <circle cx="82" cy="43" r="11"/>
+                  <path d="M25 82v-17c0-9 6-15 15-15h5"/>
+                  <path d="M95 82v-17c0-9-6-15-15-15h-5"/>
+                  <path d="M48 83v-19c0-9 5-15 12-15s12 6 12 15v19"/>
+                  <path d="M33 83v-13M87 83v-13"/>
+                </g>
+              </svg>
+
+              <h3 class="population-card-title">General population</h3>
+            </div>
+
+            <p class="population-card-desc">
+              Community or college samples recruited without explicit screening for body-image or eating-disorder risk, and without a formal clinical diagnosis.
+            </p>
+
+            <span class="card-link">Learn more <span>→</span></span>
+          </a>
+
+          <a class="population-card" href="#high-risk-population">
+            <div class="population-card-top">
+              <svg class="population-svg-icon" viewBox="0 0 120 120" aria-hidden="true">
+                <circle cx="60" cy="60" r="58" fill="#efe8ff"/>
+                <g fill="none" stroke="#6d3fd6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="60" cy="48" r="11"/>
+                  <path d="M42 78c0-12 8-20 18-20s18 8 18 20"/>
+                  <circle cx="33" cy="59" r="9"/>
+                  <circle cx="87" cy="59" r="9"/>
+                  <path d="M18 82c0-10 6-17 15-17s15 7 15 17"/>
+                  <path d="M72 82c0-10 6-17 15-17s15 7 15 17"/>
+                  <path d="M43 42c4-13 13-20 17-20s13 7 17 20"/>
+                  <path d="M60 15v8M39 25l6 6M81 25l-6 6"/>
+                </g>
+              </svg>
+
+              <h3 class="population-card-title">High risk population</h3>
+            </div>
+
+            <p class="population-card-desc">
+              Participants at elevated risk based on screening, self-reported concerns, subthreshold symptoms, or risk-related recruitment, without a formal diagnosis.
+            </p>
+
+            <span class="card-link">Learn more <span>→</span></span>
+          </a>
+
+          <a class="population-card" href="#eating-disorder-population">
+            <div class="population-card-top">
+              <svg class="population-svg-icon" viewBox="0 0 120 120" aria-hidden="true">
+                <circle cx="60" cy="60" r="58" fill="#efe8ff"/>
+                <g fill="none" stroke="#6d3fd6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="60" cy="34" r="13"/>
+                  <path d="M30 88v-12c0-20 14-34 30-34s30 14 30 34v12"/>
+                  <path d="M60 78l-17-17c-6-6-1-18 9-18 5 0 8 3 8 3s3-3 8-3c10 0 15 12 9 18L60 78Z"/>
+                  <path d="M42 91c-10-4-16-12-18-24 14 2 23 10 26 24"/>
+                  <path d="M78 91c10-4 16-12 18-24-14 2-23 10-26 24"/>
+                </g>
+              </svg>
+
+              <h3 class="population-card-title">Eating disorder population</h3>
+            </div>
+
+            <p class="population-card-desc">
+              Clinical samples with a confirmed eating-disorder diagnosis, or recruitment from clinical treatment settings.
+            </p>
+
+            <span class="card-link">Learn more <span>→</span></span>
+          </a>
+        </div>
+      </section>
+
+      <section class="evidence-board" id="interventions" aria-labelledby="interventionsTitle">
+        <div class="evidence-panel">
+          <div class="evidence-panel-head">
+            <h2 id="interventionsTitle">Interventions</h2>
+            <a class="evidence-link" href="#general-population">View population-specific results <span>→</span></a>
+          </div>
+
+          <div class="intervention-grid" aria-label="Intervention categories">
+            <button class="intervention-card blue" type="button" data-code="CBT" data-color="blue" aria-haspopup="dialog" aria-label="Open CBT intervention details">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M9 4c-2 0-3.5 1.5-3.5 3.4 0 .5.1 1 .3 1.5A4 4 0 0 0 4 12.3c0 2 1.4 3.6 3.2 3.9-.1.3-.2.7-.2 1 0 1.8 1.5 3.2 3.3 3.2 1.4 0 2.7-.9 3.1-2.2M15 4c2 0 3.5 1.5 3.5 3.4 0 .5-.1 1-.3 1.5a4 4 0 0 1 1.8 3.4c0 2-1.4 3.6-3.2 3.9.1.3.2.7.2 1 0 1.8-1.5 3.2-3.3 3.2-1.4 0-2.7-.9-3.1-2.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="code">CBT</span>
+              <span class="name">Cognitive Behavioural<br>Therapy</span>
+              <span class="study-count">View details</span>
+            </button>
+
+            <button class="intervention-card teal" type="button" data-code="ACT" data-color="teal" aria-haspopup="dialog" aria-label="Open ACT intervention details">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 21c3.8-3.1 6.2-6.2 6.2-9.7A6.2 6.2 0 0 0 12 5.1a6.2 6.2 0 0 0-6.2 6.2c0 3.5 2.4 6.6 6.2 9.7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M8.6 12.2l2.2 2.2 4.7-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="code">ACT</span>
+              <span class="name">Acceptance and Commitment<br>Therapy</span>
+              <span class="study-count">View details</span>
+            </button>
+
+            <button class="intervention-card pink" type="button" data-code="SC" data-color="pink" aria-haspopup="dialog" aria-label="Open SC intervention details">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20.4 5.6a5.1 5.1 0 0 0-7.2 0L12 6.8l-1.2-1.2a5.1 5.1 0 1 0-7.2 7.2L12 21l8.4-8.2a5.1 5.1 0 0 0 0-7.2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+              <span class="code">SC</span>
+              <span class="name">Self-Compassion<br>Intervention</span>
+              <span class="study-count">View details</span>
+            </button>
+
+            <button class="intervention-card blue" type="button" data-code="MBI" data-color="blue" aria-haspopup="dialog" aria-label="Open MBI intervention details">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 20c-4.2-1.2-6.8-4.2-6.8-8.1 3.1.2 5.6 1.7 6.8 4.5 1.2-2.8 3.7-4.3 6.8-4.5 0 3.9-2.6 6.9-6.8 8.1Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M12 16.4C9.8 13.2 9.9 9.8 12 6c2.1 3.8 2.2 7.2 0 10.4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+              <span class="code">MBI</span>
+              <span class="name">Mindfulness-Based<br>Intervention</span>
+              <span class="study-count">View details</span>
+            </button>
+
+            <button class="intervention-card pink" type="button" data-code="BPBD" data-color="pink" aria-haspopup="dialog" aria-label="Open BPBD intervention details">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12c2.6-4.7 6.5-4.7 9.1 0 1.4 2.6 3.4 2.6 4.9 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M7.3 17.3c1.1 1 2.6 1.7 4.7 1.7s3.6-.7 4.7-1.7M8 7.5h.01M16 7.5h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="code">BPBD</span>
+              <span class="name">Body Positivity /<br>Body Diversity</span>
+              <span class="study-count">View details</span>
+            </button>
+
+            <button class="intervention-card purple" type="button" data-code="BFBN" data-color="purple" aria-haspopup="dialog" aria-label="Open BFBN intervention details">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 4c-1.6 0-2.8 1.4-2.8 3.2 0 1.6.8 2.9 2 3.2v8.6M10 4v15M14 4v15M17 4c1.6 0 2.8 1.4 2.8 3.2 0 1.6-.8 2.9-2 3.2v8.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="code">BFBN</span>
+              <span class="name">Body Functionality /<br>Body Neutrality</span>
+              <span class="study-count">View details</span>
+            </button>
+
+            <button class="intervention-card orange" type="button" data-code="CBM" data-color="orange" aria-haspopup="dialog" aria-label="Open CBM intervention details">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 12s3-5 8-5 8 5 8 5-3 5-8 5-8-5-8-5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M12 14.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M17.5 5.5 20 3M6.5 18.5 4 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="code">CBM</span>
+              <span class="name">Cognitive Bias<br>Modification</span>
+              <span class="study-count">View details</span>
+            </button>
+
+            <button class="intervention-card orange" type="button" data-code="EC" data-color="orange" aria-haspopup="dialog" aria-label="Open EC intervention details">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 7h4v4H7V7Zm6 6h4v4h-4v-4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M14 7h3v3M10 17H7v-3M14 8.5 10 12.5M10 15.5 14 11.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="code">EC</span>
+              <span class="name">Evaluative<br>Conditioning</span>
+              <span class="study-count">View details</span>
+            </button>
+
+            <button class="intervention-card gold" type="button" data-code="CD" data-color="gold" aria-haspopup="dialog" aria-label="Open CD intervention details">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 3v18M5 7h14M7 7l-4 7h8L7 7Zm10 0-4 7h8l-4-7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="code">CD</span>
+              <span class="name">Cognitive Dissonance</span>
+              <span class="study-count">View details</span>
+            </button>
+
+            <button class="intervention-card red" type="button" data-code="PE" data-color="red" aria-haspopup="dialog" aria-label="Open PE intervention details">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 5.5C7.2 4.5 9.6 4.6 12 6v13c-2.4-1.4-4.8-1.5-7-.5v-13Zm7 .5c2.4-1.4 4.8-1.5 7-.5v13c-2.2-1-4.6-.9-7 .5V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M7 9h2.5M14.5 9H17M7 12h2M14.5 12H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="code">PE</span>
+              <span class="name">Psychoeducational<br>Intervention</span>
+              <span class="study-count">View details</span>
+            </button>
+
+            <button class="intervention-card green" type="button" data-code="PPI" data-color="green" aria-haspopup="dialog" aria-label="Open PPI intervention details">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 3.8 14.5 9l5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4L9.5 9 12 3.8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+              <span class="code">PPI</span>
+              <span class="name">Positive Psychology<br>Intervention</span>
+              <span class="study-count">View details</span>
+            </button>
+
+            <button class="intervention-card slate" type="button" data-code="SCI" data-color="slate" aria-haspopup="dialog" aria-label="Open SCI intervention details">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 4h12v16H6V4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M9 8h6M9 12h6M9 16h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M17 7l3-3M20 4v4h-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="code">SCI</span>
+              <span class="name">Stimulus Control-Based<br>Intervention</span>
+              <span class="study-count">View details</span>
+            </button>
+
+            <button class="intervention-card teal" type="button" data-code="EW" data-color="teal" aria-haspopup="dialog" aria-label="Open EW intervention details">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 20h14M6 17l9.8-9.8 2.8 2.8L8.8 19H6v-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14.5 8.5 17.5 11.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="code">EW</span>
+              <span class="name">Expressive Writing<br>Intervention</span>
+              <span class="study-count">View details</span>
+            </button>
+
+            <button class="intervention-card purple" type="button" data-code="IPI" data-color="purple" aria-haspopup="dialog" aria-label="Open IPI intervention details">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 8a3 3 0 1 0 0 6h2M17 8a3 3 0 1 1 0 6h-2M9 12h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 4v3M12 17v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="code">IPI</span>
+              <span class="name">Integrated Psychotherapy<br>Intervention</span>
+              <span class="study-count">View details</span>
+            </button>
+
+            <button class="intervention-card slate" type="button" data-code="NAC" data-color="slate" aria-haspopup="dialog" aria-label="Open NAC intervention details">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 4a8 8 0 1 1 0 16 8 8 0 0 1 0-16Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <span class="code">NAC</span>
+              <span class="name">Non-active Control</span>
+              <span class="study-count">Comparator</span>
+            </button>
+
+            <button class="intervention-card slate" type="button" data-code="AC" data-color="slate" aria-haspopup="dialog" aria-label="Open AC intervention details">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 4a8 8 0 1 1 0 16 8 8 0 0 1 0-16Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <span class="code">AC</span>
+              <span class="name">Active Control</span>
+              <span class="study-count">Comparator</span>
+            </button>
+          </div>
+
+          <p class="evidence-note">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 10v7M12 7h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Click any intervention card to enlarge it, flip it, and view a short description. Control nodes are included as comparator categories.
+          </p>
+        </div>
+
+        <div class="intervention-modal" id="interventionModal" hidden aria-hidden="true">
+          <button class="intervention-modal-backdrop" id="interventionBackdrop" type="button" aria-label="Close intervention details"></button>
+
+          <div class="intervention-fly-card purple" id="interventionFlyCard" role="dialog" aria-modal="true" aria-labelledby="modalCode" aria-describedby="modalDescription">
+            <div class="intervention-flip-card" id="interventionFlipCard">
+              <div class="intervention-modal-face intervention-modal-front">
+                <button class="modal-close" type="button" aria-label="Close intervention details">×</button>
+                <div id="modalIconFront" aria-hidden="true"></div>
+                <span class="modal-code" id="modalCode">BFBN</span>
+                <h3 class="modal-name" id="modalName">Body Functionality / Body Neutrality</h3>
+                <p class="modal-count" id="modalCount">28 studies</p>
+                <span class="modal-tap-hint">Click card to flip back</span>
+              </div>
+
+              <div class="intervention-modal-face intervention-modal-back">
+                <button class="modal-close" type="button" aria-label="Close intervention details">×</button>
+                <div class="modal-scroll-content" id="modalScrollContent" tabindex="0">
+                  <span class="modal-back-kicker">Intervention summary</span>
+                  <h3 id="modalBackTitle">BFBN</h3>
+                  <p id="modalDescription"></p>
+
+                  <div class="modal-info-grid">
+                    <div class="modal-info-box">
+                      <strong>Core mechanism</strong>
+                      <span id="modalMechanism"></span>
+                    </div>
+                    <div class="modal-info-box">
+                      <strong>Typical content</strong>
+                      <span id="modalFormats"></span>
+                    </div>
+                  </div>
+
+                  <a class="modal-pop-link" href="#general-population">View population-specific results →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="population-detail-section" id="general-population">
+        <div class="population-detail-card">
+          <div class="population-detail-header">
+            <svg class="population-svg-icon" viewBox="0 0 120 120" aria-hidden="true">
+              <circle cx="60" cy="60" r="58" fill="#efe8ff"/>
+              <g fill="none" stroke="#6d3fd6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="38" cy="43" r="11"/>
+                <circle cx="60" cy="39" r="11"/>
+                <circle cx="82" cy="43" r="11"/>
+                <path d="M25 82v-17c0-9 6-15 15-15h5"/>
+                <path d="M95 82v-17c0-9-6-15-15-15h-5"/>
+                <path d="M48 83v-19c0-9 5-15 12-15s12 6 12 15v19"/>
+                <path d="M33 83v-13M87 83v-13"/>
+              </g>
+            </svg>
+
+            <div>
+              <span class="population-kicker">Population-specific results</span>
+              <h2>General population</h2>
+              <p>
+                This section presents intervention effects among community or college samples recruited without explicit screening for body-image or eating-disorder risk, and without a formal clinical diagnosis.
+              </p>
+            </div>
+          </div>
+
+          <div class="result-grid">
+            <article class="result-card result-card--figure">
+              <h3>Network plot</h3>
+              <p>Network structure of interventions for the general population.</p>
+
+              <div class="figure-box">
+                <img
+                  src="assets/figures/network_plot_general.png"
+                  alt="Network plot for general population"
+                >
+              </div>
+            </article>
+
+            <article class="result-card result-card--figure">
+              <h3>Forest plot</h3>
+              <p>Comparative intervention effects for the general population.</p>
+
+              <div class="figure-box">
+                <img
+                  src="assets/figures/forest_plot_general.png"
+                  alt="Forest plot for general population"
+                >
+              </div>
+            </article>
+
+            <article class="result-card result-card--figure">
+              <h3>Ranking plot</h3>
+              <p>Intervention ranking based on SUCRA probabilities.</p>
+
+              <div class="figure-box">
+                <img
+                  src="assets/figures/ranking_plot_general.png"
+                  alt="Ranking plot for general population"
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="population-detail-section" id="high-risk-population">
+        <div class="population-detail-card">
+          <div class="population-detail-header">
+            <svg class="population-svg-icon" viewBox="0 0 120 120" aria-hidden="true">
+              <circle cx="60" cy="60" r="58" fill="#efe8ff"/>
+              <g fill="none" stroke="#6d3fd6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="60" cy="48" r="11"/>
+                <path d="M42 78c0-12 8-20 18-20s18 8 18 20"/>
+                <circle cx="33" cy="59" r="9"/>
+                <circle cx="87" cy="59" r="9"/>
+                <path d="M18 82c0-10 6-17 15-17s15 7 15 17"/>
+                <path d="M72 82c0-10 6-17 15-17s15 7 15 17"/>
+                <path d="M43 42c4-13 13-20 17-20s13 7 17 20"/>
+                <path d="M60 15v8M39 25l6 6M81 25l-6 6"/>
+              </g>
+            </svg>
+
+            <div>
+              <span class="population-kicker">Population-specific results</span>
+              <h2>High risk population</h2>
+              <p>
+                This section presents intervention effects among participants at elevated risk based on screening, self-reported concerns, subthreshold symptoms, or risk-related recruitment, without a formal diagnosis.
+              </p>
+            </div>
+          </div>
+
+          <div class="result-grid">
+            <article class="result-card result-card--figure">
+              <h3>Network plot</h3>
+              <p>Network structure of interventions for the high-risk population.</p>
+
+              <div class="figure-box">
+                <img
+                  src="assets/figures/network_plot_highrisk.png"
+                  alt="Network plot for high-risk population"
+                >
+              </div>
+            </article>
+
+            <article class="result-card result-card--figure">
+              <h3>Forest plot</h3>
+              <p>Comparative intervention effects for the high-risk population.</p>
+
+              <div class="figure-box">
+                <img
+                  src="assets/figures/forest_plot_highrisk.png"
+                  alt="Forest plot for high-risk population"
+                >
+              </div>
+            </article>
+
+            <article class="result-card result-card--figure">
+              <h3>Ranking plot</h3>
+              <p>Intervention ranking based on SUCRA probabilities.</p>
+
+              <div class="figure-box">
+                <img
+                  src="assets/figures/ranking_plot_highrisk.png"
+                  alt="Ranking plot for high-risk population"
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="population-detail-section" id="eating-disorder-population">
+        <div class="population-detail-card">
+          <div class="population-detail-header">
+            <svg class="population-svg-icon" viewBox="0 0 120 120" aria-hidden="true">
+              <circle cx="60" cy="60" r="58" fill="#efe8ff"/>
+              <g fill="none" stroke="#6d3fd6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="60" cy="34" r="13"/>
+                <path d="M30 88v-12c0-20 14-34 30-34s30 14 30 34v12"/>
+                <path d="M60 78l-17-17c-6-6-1-18 9-18 5 0 8 3 8 3s3-3 8-3c10 0 15 12 9 18L60 78Z"/>
+                <path d="M42 91c-10-4-16-12-18-24 14 2 23 10 26 24"/>
+                <path d="M78 91c10-4 16-12 18-24-14 2-23 10-26 24"/>
+              </g>
+            </svg>
+
+            <div>
+              <span class="population-kicker">Population-specific results</span>
+              <h2>Eating disorder population</h2>
+              <p>
+                This section presents intervention effects among clinical samples with a confirmed eating-disorder, or recruitment from clinical treatment settings.
+              </p>
+            </div>
+          </div>
+
+          <div class="result-grid">
+            <article class="result-card result-card--figure">
+              <h3>Network plot</h3>
+              <p>Network structure of interventions for the eating disorder population.</p>
+
+              <div class="figure-box">
+                <img
+                  src="assets/figures/network_plot_eating_disorder.png"
+                  alt="Network plot for eating disorder population"
+                >
+              </div>
+            </article>
+
+            <article class="result-card result-card--figure">
+              <h3>Forest plot</h3>
+              <p>Comparative intervention effects for the eating disorder population.</p>
+
+              <div class="figure-box">
+                <img
+                  src="assets/figures/forest_plot_eating_disorder.png"
+                  alt="Forest plot for eating disorder population"
+                >
+              </div>
+            </article>
+
+            <article class="result-card result-card--figure">
+              <h3>Ranking plot</h3>
+              <p>Intervention ranking based on SUCRA probabilities.</p>
+
+              <div class="figure-box">
+                <img
+                  src="assets/figures/ranking_plot_eating_disorder.png"
+                  alt="Ranking plot for eating disorder population"
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-bottom">
+          <p>© 2026 Living Systematic Review of Body Image Interventions </p>
+          <p>This site is built with <span class="heart">♥</span> and open science.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/index.js"></script>
+</body>
+</html>
