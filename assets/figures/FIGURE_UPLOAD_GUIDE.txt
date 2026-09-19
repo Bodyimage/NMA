@@ -1,0 +1,16 @@
+Place the following PNG files in this folder before uploading to GitHub Pages:
+
+network_plot_general.png
+forest_plot_general.png
+ranking_plot_general.png
+network_plot_highrisk.png
+forest_plot_highrisk.png
+ranking_plot_highrisk.png
+network_plot_eating_disorder.png
+forest_plot_eating_disorder.png
+ranking_plot_eating_disorder.png
+
+The index.html file already uses these relative paths:
+assets/figures/<file_name>.png
+
+Do not use absolute Windows paths such as F:\... in HTML, because GitHub Pages cannot read files from your local computer.
