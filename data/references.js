@@ -1424,7 +1424,7 @@ window.referenceData = [
     ],
     "intervention": "Cognitive dissonance, Active Control",
     "doi": "http://doi.org/10.1037/hea0000090",
-    "label": "purple"
+    "label": "gray"
   },
   {
     "id": "95",
@@ -2945,4 +2945,36 @@ window.referenceData = [
     "doi": "https://dx.doi.org/10.1037/ppm0000692",
     "label": "gray"
   }
+  {
+    "id": "238",
+    "title": "Can following body positive or appearance neutral Facebook pages improve young women’s body image and mood? Testing novel social media micro-interventions",
+    "authors": "Jasmine Fardouly",
+    "journal": "Body Image",
+    "year": "2023",
+     "population": "General population",
+    "interventions": [
+      "Body positivity/ Body diversity",
+      "Active Control",
+      "Non-active Control"
+    ],
+    "intervention": "Cognitive behavioral therapy, Active Control, Non-active Control",
+    "doi": "https://www.sciencedirect.com/science/article/pii/S174014452200211X",
+    "label": "purple"
+  },
+  {
+    "id": "239",
+    "title": "A randomized controlled trial investigating two protective filtering strategies to mitigate the effects of beauty-ideal media imagery on women's body image",
+    "authors": "Jessica M. Alleva",
+    "journal": "Body Image",
+    "year": "2024",
+     "population": "General population",
+    "interventions": [
+      "Body functionality/ Body neutrality",
+      "Positive Psychology Intervention",
+      "Non-active Control"
+    ],
+    "intervention": "Body functionality/ Body neutrality, Positive Psychology Intervention, Non-active Control",
+    "doi": "https://www.sciencedirect.com/science/article/pii/S1740144517302991",
+    "label": "purple"
+  },
 ];
