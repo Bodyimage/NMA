@@ -2944,7 +2944,7 @@ window.referenceData = [
     "year": "2026",
     "doi": "https://dx.doi.org/10.1037/ppm0000692",
     "label": "gray"
-  }
+  },
   {
     "id": "238",
     "title": "Can following body positive or appearance neutral Facebook pages improve young women’s body image and mood? Testing novel social media micro-interventions",
@@ -2976,5 +2976,5 @@ window.referenceData = [
     "intervention": "Body functionality/ Body neutrality, Positive Psychology Intervention, Non-active Control",
     "doi": "https://www.sciencedirect.com/science/article/pii/S1740144517302991",
     "label": "purple"
-  },
+  }
 ];
